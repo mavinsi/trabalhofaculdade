@@ -1,0 +1,36 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img onclick="inflar()" style="width: 150px;" src="./imgs/bombinha.webp">
+    <img id="balao"style="width: 150px;" src="./imgs/balao.webp">
+</body>
+
+<script>
+
+ let balaoimg = document.getElementById("balao")
+
+ let numero = 1;
+  
+  function inflar() {
+    if (numero <= 10) {
+      console.log(numero);
+      balaoimg.style.scale = numero
+      numero++;
+      setTimeout(inflar, 500); // 1000 milissegundos = 1 segundo
+    }else{
+        balaoimg.style.display = "none"
+ 
+    }
+    
+  }
+
+ 
+
+</script>
+
+</html>
